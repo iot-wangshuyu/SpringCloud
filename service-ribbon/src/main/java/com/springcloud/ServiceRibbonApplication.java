@@ -21,8 +21,8 @@ public class ServiceRibbonApplication {
 
 
 	/**
-	 * @LoadBalanced注解表明这个restRemplate开启负载均衡的功能
-	 * @return
+	 * LoadBalanced注解表明这个restRemplate开启负载均衡的功能
+	 * return
 	 */
 	@Bean
 	@LoadBalanced

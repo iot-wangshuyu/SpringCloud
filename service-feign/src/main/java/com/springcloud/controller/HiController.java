@@ -1,0 +1,26 @@
+package com.springcloud.controller;
+
+import com.springcloud.service.SchedualServiceHi;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author shuyu.wang
+ * @version V1.0
+ * @ClassName: ${type_name}
+ * @Description: ${todo}
+ * @date ${date} ${time}
+ */
+@RestController
+public class HiController {
+
+    @Autowired
+    SchedualServiceHi schedualServiceHi;
+    @RequestMapping(value = "/hi",method = RequestMethod.GET)
+    public String sayHi(@RequestParam String name){
+        return schedualServiceHi.sayHiFromClientOne(name);
+    }
+}

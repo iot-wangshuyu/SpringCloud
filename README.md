@@ -12,3 +12,8 @@ client2 服务提供者2
    证明实现了负载均衡
    
 ![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/service-ribbon/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171128153036.png)
+
+
+3:使用Feign实现服务消费者
+Feign 采用的是基于接口的注解
+Feign 整合了ribbon
