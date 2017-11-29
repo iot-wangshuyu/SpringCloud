@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="client" />
         <module name="client2" />
+        <module name="config-server" />
         <module name="server" />
         <module name="service-feign" />
         <module name="service-ribbon" />
@@ -18,6 +19,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="client" target="1.8" />
       <module name="client2" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="server" target="1.8" />
       <module name="service-feign" target="1.8" />
       <module name="service-ribbon" target="1.8" />
