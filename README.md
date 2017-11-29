@@ -17,3 +17,19 @@ client2 服务提供者2
 3:使用Feign实现服务消费者
 Feign 采用的是基于接口的注解
 Feign 整合了ribbon
+
+4：整合Hystrix，避免雪崩效应
+Feign是自带断路器的，在D版本的Spring Cloud中，它没有默认打开。需要在配置文件中配置打开它，在配置文件加以下代码：
+feign.hystrix.enabled=true
+
+5:断路器（Hystrix）实现
+    a.在ribbon使用断路器
+    改造serice-ribbon 工程的代码，首先在pox.xml文件中加入spring-cloud-starter-hystrix的起步依赖：
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-hystrix</artifactId>
+    </dependency>
+    在程序的启动类ServiceRibbonApplication 加@EnableHystrix注解开启Hystrix
+    b.Feign是自带断路器的，在D版本的Spring Cloud中，它没有默认打开。需要在配置文件中配置打开它，在配置文件加以下代码：   
+      feign.hystrix.enabled=true
+      

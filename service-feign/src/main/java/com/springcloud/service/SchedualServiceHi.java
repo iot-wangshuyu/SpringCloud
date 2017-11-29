@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description: ${todo}
  * @date ${date} ${time}
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi",fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
