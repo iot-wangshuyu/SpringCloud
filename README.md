@@ -78,4 +78,7 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
 8:高可用的分布式配置中心(Spring Cloud Config)
 
     将配置中心做成一个微服务，将其集群化，从而达到高可用，架构图如下
-![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171130175602.png)
+![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171130180351.png)
+    
+    配置服务查看网址http://localhost:8889/
+    配置服务测试网址
