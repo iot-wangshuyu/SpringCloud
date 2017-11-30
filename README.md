@@ -72,3 +72,10 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
     在Spring Cloud中，有分布式配置中心组件spring cloud config ，它支持配置服务放在配置服务的内存中（即本地），
     也支持放在远程Git仓库中。在spring cloud config 组件中，分两个角色，一是config server，二是config client。
     每个应该工程都可以上配置成一个config client，通过config server从中央仓库拉去相关配置
+![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171130175602.png)
+
+
+8:高可用的分布式配置中心(Spring Cloud Config)
+
+    将配置中心做成一个微服务，将其集群化，从而达到高可用，架构图如下
+![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171130175602.png)
