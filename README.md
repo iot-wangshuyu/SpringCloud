@@ -84,7 +84,9 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
     配置服务测试网址
     
  9:消息总线(Spring Cloud Bus)
- 复制一个新的config-client，修改端口号，添加相关配置
- 一次启动config的相关工程，访问http://localhost:8881/hi和http://localhost:8882/hi，返回相同结果
- 修改仓库的foo 版本号，然后post请求 http://localhost:8881/bus/refresh
+ 
+     复制一个新的config-client，修改端口号，添加相关配置
+     一次启动config的相关工程，访问http://localhost:8881/hi和http://localhost:8882/hi，返回相同结果
+     修改仓库的foo 版本号，然后post请求 http://localhost:8881/bus/refresh
+     重新访问http://localhost:8881/hi和http://localhost:8882/hi，返回结果都变为新更改的版本号
  
