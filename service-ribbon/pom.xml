@@ -59,6 +59,17 @@
             <artifactId>hystrix-core</artifactId>
             <version>1.5.12</version>
         </dependency>
+
+        <!--监控中心-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--hystrix监控-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

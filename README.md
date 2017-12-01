@@ -50,6 +50,14 @@ SpringCloud分布式开发五大神兽
     在程序的启动类ServiceRibbonApplication 加@EnableHystrix注解开启Hystrix
     b.Feign是自带断路器的，在D版本的Spring Cloud中，它没有默认打开。需要在配置文件中配置打开它，在配置文件加以下代码：   
       feign.hystrix.enabled=true
+      
+      断路器仪表盘监控：
+      重启工程，打开浏览器访问：http://localhost:8084/hystrix
+![Image text](http://img.blog.csdn.net/20171201175624221?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ19zaHV5dQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+      在1处输入：http://localhost:8084/hystrix.stream
+      在2处随便输入一个名称，点击按钮跳转到如下页面：
+![Image text](http://img.blog.csdn.net/20171201175754760?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ19zaHV5dQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 
 6:集成Zuul
 Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一部分，比如／api/user转发到到user服务，/api/shop转发到到shop服务。zuul默认和Ribbon结合实现了负载均衡的功能。
