@@ -89,4 +89,5 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
      一次启动config的相关工程，访问http://localhost:8881/hi和http://localhost:8882/hi，返回相同结果
      修改仓库的foo 版本号，然后post请求 http://localhost:8881/bus/refresh
      重新访问http://localhost:8881/hi和http://localhost:8882/hi，返回结果都变为新更改的版本号
- 
+ ![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171201164614.png)
+  
