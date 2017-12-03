@@ -89,7 +89,7 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
 ![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171130180351.png)
     
     配置服务查看网址http://localhost:8889/
-    配置服务测试网址
+    配置服务测试网址：http://localhost:8881/hi
     
  9:消息总线(Spring Cloud Bus)
  
