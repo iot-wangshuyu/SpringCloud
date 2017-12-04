@@ -13,7 +13,10 @@
         <module name="config-eureka-server" />
         <module name="config-server" />
         <module name="server" />
+        <module name="server-zipkin" />
         <module name="service-feign" />
+        <module name="service-hi" />
+        <module name="service-hi2" />
         <module name="service-ribbon" />
         <module name="service-zuul" />
         <module name="springcloud" />
@@ -27,7 +30,10 @@
       <module name="config-eureka-server" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="server" target="1.8" />
+      <module name="server-zipkin" target="1.8" />
       <module name="service-feign" target="1.8" />
+      <module name="service-hi" target="1.8" />
+      <module name="service-hi2" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="service-zuul" target="1.8" />
       <module name="springcloud" target="1.5" />

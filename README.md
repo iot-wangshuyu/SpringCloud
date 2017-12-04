@@ -99,3 +99,7 @@ Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一�
      重新访问http://localhost:8881/hi和http://localhost:8882/hi，返回结果都变为新更改的版本号
  ![Image text](https://github.com/iot-wangshuyu/springcloud/blob/master/config-server/src/main/resources/static/TIM%E6%88%AA%E5%9B%BE20171201164614.png)
   
+10:服务链路追踪(SpringCloud Sleuth)
+实现服务追踪监测：
+ui:http://localhost:8887/zipkin/
+http://localhost:8890/test
