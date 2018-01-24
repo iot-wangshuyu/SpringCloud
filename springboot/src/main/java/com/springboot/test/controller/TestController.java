@@ -1,8 +1,10 @@
 package com.springboot.test.controller;
 
 import com.springboot.common.bean.Redis;
+import com.springboot.redis.RedisService;
 import com.springboot.test.mapper.UserMapper;
-import com.springboot.utils.ReadProperties;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,27 +27,39 @@ public class TestController {
 
     Logger logeer = Logger.getLogger(TestController.class);
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello(){
-        return  "hello Spring boot";
+    @ApiOperation(value = "第一个接口", notes = "hello接口")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
+        return "hello Spring boot";
     }
 
+
+    //    @Autowired
+//    private ReadProperties readProperties;
+//    @ApiOperation(value="读取配置文件", notes="读取配置文件")
+//    @RequestMapping(value = "/read",method = RequestMethod.GET)
+//    public String read(){
+//        readProperties.read();
+//        logeer.info("over");
+//        return  "over";
+//    }
+    @Autowired
+    private UserMapper userMapper;
+
+    @ApiOperation(value = "整合mybatis", notes = "整合mybatis")
+    @RequestMapping(value = "/db", method = RequestMethod.GET)
+    public List<Map<String, Object>> db() {
+        return userMapper.listUsers();
+    }
 
     @Autowired
-    private ReadProperties readProperties;
+    private RedisService redisService;
 
-    @RequestMapping(value = "/read",method = RequestMethod.GET)
-    public String read(){
-        readProperties.read();
-        logeer.info("over");
-        return  "over";
-    }
-     @Autowired
-     private UserMapper userMapper;
-
-    @RequestMapping(value = "/db",method = RequestMethod.GET)
-    public List<Map<String,Object>> db(){
-        return  userMapper.listUsers();
+    @ApiOperation(value = "整合redis", notes = "整合redis")
+    @RequestMapping(value = "/redis", method = RequestMethod.GET)
+    public String reids() {
+        redisService.setString("my1","20171213");
+        return redisService.getString("my1");
     }
 
 }
