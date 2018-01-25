@@ -35,8 +35,16 @@ public enum ResultCode {
 	/**
 	 * 无数据
 	 */
+
 	NO_DATA(10),
 	
+	/**
+	 * url不存在
+	 */
+	NO_URL(404),
+	
+	METHOD_NOT_ALLOWED(405),
+
 	/**
 	 * 服务器异常
 	 */

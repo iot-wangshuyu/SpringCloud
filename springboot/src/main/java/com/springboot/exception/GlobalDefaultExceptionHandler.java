@@ -2,25 +2,26 @@ package com.springboot.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.springboot.common.bean.ApiResult;
-import com.springboot.common.bean.ResultCode;
-import com.springboot.common.bean.ResultMessage;
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.springboot.common.bean.ApiResult;
+import com.springboot.common.bean.ResultCode;
+import com.springboot.common.bean.ResultMessage;
 
 
 /**
  * @ClassName: GlobalDefaultExceptionHandler
- * @Description: 异常集中处理，更好的使业务逻辑与异常处理剥离开
+ * @Description: 在controller里执行逻辑代码时出的异常
  * @author shuyu.wang
  * @date 2017年11月23日 上午9:45:16
  * @version V1.0
  */
 @ControllerAdvice
 public class GlobalDefaultExceptionHandler {
-
+	private Logger logger = Logger.getLogger(GlobalDefaultExceptionHandler.class);
 	/**
 	 * @Title: defaultErrorHandler 
 	 * @Description: 统一处理某一类异常，从而能够减少代码重复率和复杂度
@@ -29,12 +30,14 @@ public class GlobalDefaultExceptionHandler {
 	 * @return ApiResult 
 	 * @throws
 	 */
-	@ExceptionHandler(value = ExceptionResult.class)
+//	@ExceptionHandler(value = ExceptionResult.class)//指定具体要处理的异常
+	@ExceptionHandler//处理所有异常
 	@ResponseBody
-	public ApiResult defaultErrorHandler(HttpServletRequest req, Exception ex) {
+	public ApiResult defaultErrorHandler(HttpServletRequest req, RuntimeException  ex) {
 		// 打印异常信息：
 		ex.printStackTrace();
-		return new ApiResult(ResultCode.SERVER_ERROR.getCode(), ResultMessage.SERVER_ERRPR.getMessage(),ex.toString(),null);
+		logger.error("捕获全局异常=="+ex);
+		return new ApiResult(ResultCode.SERVER_ERROR.getCode(),ResultMessage.SERVER_ERROR.getMessage(),ex.toString(),null);
 
 	} 
 

@@ -1,7 +1,7 @@
 package com.springboot.exception;
 
-import com.ganinfo.common.bean.ResultCode;
-import com.ganinfo.common.bean.ResultMessage;
+import com.springboot.common.bean.ResultCode;
+import com.springboot.common.bean.ResultMessage;
 
 
 
