@@ -1,0 +1,4 @@
+#这里的配置表示，访问/it/**
+zuul.routes.api-a.path=/test/**
+#直接重定向到
+zuul.routes.api-a.serviceId=SERVICE-HI
