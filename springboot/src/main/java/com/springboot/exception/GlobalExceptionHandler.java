@@ -6,6 +6,7 @@ package com.springboot.exception;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -23,9 +24,19 @@ import com.springboot.common.bean.ResultMessage;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
-	
-	 /**
-     * 在controller里面内容执行之前，校验一些参数不匹配啊，Get post方法不对啊之类的
+
+    /**
+     * 处理@RequestParam错误, 即参数不足
+     * @return
+     */
+    @Override
+    protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+        return new ResponseEntity<Object>(new ApiResult(ResultCode.PARAM_ERROR.getCode(),ResultMessage.PARAM_ERROR.getMessage()), status);
+    }
+
+    /**
+     * 500
+     * 请求方式不支持
      */
     @Override
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {
