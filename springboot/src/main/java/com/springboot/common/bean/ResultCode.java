@@ -42,9 +42,14 @@ public enum ResultCode {
 	 * url不存在
 	 */
 	NO_URL(404),
-	
+	/**
+	 * 请求方式不知道
+	 */
 	METHOD_NOT_ALLOWED(405),
-
+	/**
+	 * 参数异常
+	 */
+	PARAM_ERROR(2),
 	/**
 	 * 服务器异常
 	 */
