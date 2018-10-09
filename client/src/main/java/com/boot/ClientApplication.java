@@ -27,6 +27,6 @@ public class ClientApplication {
     public String home(@RequestParam String name) {
        //測試开发功能如何合并
         return "hi "+name+",i am from port:" +port;
-        //测试热修复功能
+        //測試开发功能如何合并a
     }
 }
