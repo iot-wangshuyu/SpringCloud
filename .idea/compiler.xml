@@ -12,6 +12,9 @@
         <module name="config-client2" />
         <module name="config-eureka-server" />
         <module name="config-server" />
+        <module name="db" />
+        <module name="demo" />
+        <module name="junittest" />
         <module name="server" />
         <module name="server-zipkin" />
         <module name="service-feign" />
@@ -19,7 +22,12 @@
         <module name="service-hi2" />
         <module name="service-ribbon" />
         <module name="service-zuul" />
+        <module name="springboot" />
         <module name="springcloud" />
+        <module name="zipkin" />
+        <module name="zipkin (1)" />
+        <module name="zipkintest1" />
+        <module name="zipkintest2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -29,6 +37,9 @@
       <module name="config-client2" target="1.8" />
       <module name="config-eureka-server" target="1.8" />
       <module name="config-server" target="1.8" />
+      <module name="db" target="1.6" />
+      <module name="demo" target="1.8" />
+      <module name="junittest" target="1.8" />
       <module name="server" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="service-feign" target="1.8" />
@@ -36,7 +47,13 @@
       <module name="service-hi2" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="service-zuul" target="1.8" />
+      <module name="spring-boot" target="1.8" />
+      <module name="springboot" target="1.8" />
       <module name="springcloud" target="1.5" />
+      <module name="zipkin" target="1.8" />
+      <module name="zipkin (1)" target="1.8" />
+      <module name="zipkintest1" target="1.8" />
+      <module name="zipkintest2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

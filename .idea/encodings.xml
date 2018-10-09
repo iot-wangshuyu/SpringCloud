@@ -7,6 +7,9 @@
     <file url="file://$PROJECT_DIR$/config-client2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/junittest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-feign" charset="UTF-8" />
@@ -14,5 +17,10 @@
     <file url="file://$PROJECT_DIR$/service-hi2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkintest1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkintest2" charset="UTF-8" />
   </component>
 </project>

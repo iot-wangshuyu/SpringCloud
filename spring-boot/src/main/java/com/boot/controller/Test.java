@@ -30,4 +30,14 @@ public class Test {
         return  user;
 
     }
+
+    @RequestMapping(value = "/add")
+    public Map<String,Object> add(){
+        Map<String, Object> user =null;
+                userService.insertUser();
+        logger.info("返回结果："+user);
+        logger.debug(user);
+        return  user;
+
+    }
 }

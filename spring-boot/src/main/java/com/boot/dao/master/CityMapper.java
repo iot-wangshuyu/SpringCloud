@@ -16,4 +16,6 @@ import java.util.Map;
 public interface CityMapper {
     List<Map<String,Object>> listCitys();
 
+    Integer insertUser();
+
 }

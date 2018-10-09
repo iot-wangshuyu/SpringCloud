@@ -5,6 +5,7 @@ import com.boot.dao.master.CityMapper;
 import com.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -33,5 +34,14 @@ public class UserServiceImpl implements UserService {
         map.put("user",maps);
         map.put("city",listCitys);
         return map;
+    }
+
+    @Override
+    @Transactional
+    public Integer insertUser() {
+        cityMapper.insertUser();
+        int i=1/0;
+        cityMapper.insertUser();
+        return null;
     }
 }
