@@ -25,6 +25,7 @@ public class ClientApplication {
     String port;
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
+       //測試开发功能如何合并
         return "hi "+name+",i am from port:" +port;
     }
 }
